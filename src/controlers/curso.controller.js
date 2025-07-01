@@ -1,4 +1,9 @@
-function listar(req, res){
+const bancoDados = require("../config/banco-dados")
+
+async function listar(req, res){
+
+    const cursos = await bancoDados.conexao.query("SELECT * FROM cursos")
+    console.log('cursos', cursos)
     res.send("Função listar cursos")
 }
 
