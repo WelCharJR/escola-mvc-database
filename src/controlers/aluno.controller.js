@@ -1,9 +1,9 @@
 function listar(req, res){
-    res.send("Função listar cursos")
+    res.send("Função listar alunos")
 }
 
 function cadastrar(req, res){
-    res.send("Função criar cursos")
+    res.send("Função criar alunos")
 }
 
 function deletar(req, res){
