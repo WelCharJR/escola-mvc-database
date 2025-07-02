@@ -1,10 +1,9 @@
-const bancoDados = require("../config/banco-dados")
+const cursoModel = require("../models/curso.model")
 
 async function listar(req, res){
-
-    const cursos = await bancoDados.conexao.query("SELECT * FROM cursos")
-    console.log('cursos', cursos)
-    res.send("Função listar cursos")
+    const cursos = await cursoModel.listarTodosCursos()
+    console.log(cursos)
+    res.json(cursos)
 }
 
 function cadastrar(req, res){
